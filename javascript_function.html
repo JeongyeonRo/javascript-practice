@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>function</title>
+</head>
+<body>
+    
+<script type="text/javascript">
+
+    /*
+      function 함수명([인자,,],,){
+         코드
+         return 반환값
+    }
+    */
+    //코드의 재활용성을 높여줌
+
+    //함수선언
+    function numbering(){
+        i=0;
+        while(i<10){
+            document.write(i);
+            i += 1;
+        }
+    }
+
+    //함수호출
+    numbering();    //0123456789   
+
+
+    //힘수출력
+    function get_mem1(){
+        return 'A'; //return의 역할 1.함수종료-이하 코드는 동작하지 않음 2.함수의출력값 반환
+    }
+    function get_mem2(){
+        return 'B';
+    }
+    alert(get_mem1()); //A
+    alert(get_mem2()); //B
+
+    //함수입력
+    function get_arg(arg){      //arg = 매개변수 = parameter
+        return arg;
+    }
+    alert(get_arg(1)); //1      //인자 = argument
+    alert(get_arg(2)); //2
+
+    function get_arg2(arg1, arg2){
+        return arg1 + arg2;
+    }
+    alert(get_arg2(10, 20));    //30
+
+
+    //**함수를 정의하는 다른 방법
+    numbering2 = function(){
+        i=0;
+        while(i <10){
+            document.write(i);
+            i += 1;
+        }
+    }
+    numbering2();
+
+    (function(){
+        i=0;
+        while(i <10){
+            document.write(i);
+            i += 1;
+        }
+    })();   //익명함수 - 일회성 함수의 경우 함수 정의 즉시 사용
+
+</script>
+
+</body>
+
+</html>
