@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+   //JavaScript 배열
+   let fruits = ['apple','banana'];
+   console.log(fruits.length); //2
+
+   let first = fruits[0];
+   console.log(first); //apple
+   let last = fruits[fruits.length - 1]; //배열의 끝에서 -1 번째 값 - 배열의 시작은 0
+   console.log(last); //banana
+
+   fruits.push('orange'); //배열 끝에 항목 추가
+   console.log(fruits[fruits.length - 1] +', '+ fruits.length); //orange, 3
+   
+   fruits.pop(); //배열의 마지막 항목 제거
+   console.log(fruits[fruits.length - 1] +', '+ fruits.length); //banana, 2
+
+   fruits.unshift('grape'); //배열의 처음에 항목 추가
+   console.log(fruits[0] +', '+ fruits.length) //grape, 3
+
+   fruits.shift(); //배열의 첫 항목 제거
+   console.log(fruits[0] +', '+ fruits.length) //apple, 2
+
+   //배열 순환
+   fruits.forEach(function (item, index, array){
+      console.log(item, index);
+      //apple 0
+      //banana 1
+   });
+
+   console.log (fruits.indexOf('apple')); //항목의 인덱스 찾기  //0
+
+   let arTest = ['a','b','c','d','e','f','g','h','i','j'];
+   let delTest = arTest.splice(1,6); //1인덱스부터 6개의 항목을 제거
+      console.log(arTest);   //?["a", "h", "i", "j"]
+      console.log(delTest);   //?["b", "c", "d", "e", "f", "g"]
+</script>
+</html>
