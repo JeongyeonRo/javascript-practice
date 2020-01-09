@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array</title>
+</head>
+<body>
+    
+<script type="text/javascript">
+    //배열
+    var member = ['A','B','C']
+    document.write(member[0]); //A
+    document.write(member[1]); //B
+
+    //배열의 효용
+    function get_mem(){
+        return ['Z','X','Y','W'];
+    }
+    var getM = get_mem();
+    document.write(getM[0]);   //Z
+
+    document.write(getM[0].toLowerCase()); //z
+
+    document.write(getM.length); //배열의 길이  - 3
+
+    //반복문을 활용한 배열의 이용   - 배열 데이터의 추가 삭제가 용이
+    for(var i=0; i<getM.length; i++){
+        document.write(getM[i]+"<br>"); //Z<br> X<br> Y<br>
+    }
+
+    //데이터 추가
+    var li = ['a','b','c','d','e'];
+    li.push('f');   //배열 끝에 문자 'f' 추가
+    alert(li);  //a,b,c,d,e,f
+    li = li.concat(['g','h']);  //배열 끝에 배열로 문자 추가
+    alert(li);  //a,b,c,d,e,f,g,h
+    li.unshift('z');    //배열 시작에 문자 'z' 추가
+    alert(li);      //z,a,b,c,d,e,f,g,h
+
+</script>
+</body>
+</html>

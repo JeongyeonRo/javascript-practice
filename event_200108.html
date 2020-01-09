@@ -9,15 +9,19 @@
   <div class="main" align="center">
       <div class="chkBox1">
           <span><input type="checkbox" id="chk1"></span>
-          <a href="javascript:;" onclick="fnPopup();">popup</a>
+          <a href="javascript:;" onclick="fnPopup(1);">popup</a>
+      </div>
+      <div class="chkBox2">
+          <span><input type="checkbox" id="chk2"></span>
+          <a href="javascript:;" onclick="fnPopup(2);">popup2</a>
       </div>
   </div>
   
   
 <script type="text/javascript">
 
-    function fnPopup(){
-        window.open("./popup.html","popup","width=400, height=200");
+    function fnPopup(chk){
+        window.open("./popup.html?chk="+chk,"popup","width=400, height=200");
     }
 
 </script>
