@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="euc-kr">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>완주하지 못한 선수</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+
+    var testP = ['leo', 'kiki', 'eden']
+    var testC = ['eden', 'kiki']
+    var answer = '';
+
+function uncomPart(participant, completion){
+
+    for(var i=0; i<participant.length; i++){;
+        for(var j=0; j<completion.length; j++){
+            if(participant[i] = completion[j]){
+                answer += participant[i];
+            }
+        }
+    }
+
+    return answer;
+}
+
+document.write(uncomPart(testP,testC))
+
+</script>
+</html>
