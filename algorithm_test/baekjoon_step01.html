@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="euc-kr">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+</head>
+<body>
+    <h3>Q2557_HelloWorld</h3>
+    Hello World!를 출력하시오. 
+    <div id="A_2557"></div>
+
+    <br><br>
+   
+    <h3>Q10718_We love kriiid</h3>
+    ACM-ICPC 인터넷 예선, Regional, 그리고 World Finals까지 이미 2회씩 진출해버린 kriii는 미련을 버리지 못하고 왠지 모르게 올 해에도 파주 World Finals 준비 캠프에 참여했다.
+    대회를 뜰 줄 모르는 지박령 kriii를 위해서 격려의 문구를 출력해주자. 
+    <div id="A_10718"></div>
+
+    <br><br>
+   
+    <h3>Q1000_A+B</h3>
+    두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오.
+    <div id="A_1000"></div>
+    
+    <br><br>
+   
+    <h3>Q1001_A-B</h3>
+    두 정수 A와 B를 입력받은 다음, A-B를 출력하는 프로그램을 작성하시오.
+    <div id="A_1001"></div>
+    
+    <br><br>
+   
+    <h3>Q10998_A*B</h3>
+    두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오.
+    <div id="A_10998"></div>
+
+</body>
+<script type="text/javascript">
+    var i = 0;
+
+    $(document).ready(function(){
+        print2557();
+        print10718();
+        print1000(10,20);
+        print1001(10,20);
+        print10998(10,20);
+    });
+
+    function print2557(){
+        $('#A_2557').text('Hello World!');
+    }
+
+    function print10718(){
+        $('#A_10718').html('강한친구 대한육군<br>강한친구 대한육군');
+    }
+
+    function print1000(a,b){
+        $('#A_1000').text(a+b);
+    }
+
+    function print1001(a,b){
+        $('#A_1001').text(a-b);
+    }
+
+    function print10998(a,b){
+        $('#A_10998').text(a*b);
+    }
+</script>
+</html>
