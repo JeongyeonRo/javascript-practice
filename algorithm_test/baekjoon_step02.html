@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="euc-kr">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+</head>
+<body>
+    <h3>Q1330_두 수 비교하기</h3>
+    두 정수 A와 B가 주어졌을 때, A와 B를 비교하는 프로그램을 작성하시오. 
+    <div id="A_1330"></div> 
+    <br><br>
+
+    <h3>Q9498_시험 성적기</h3>
+    시험 점수를 입력받아 90 ~ 100점은 A, 80 ~ 89점은 B, 70 ~ 79점은 C, 60 ~ 69점은 D, 나머지 점수는 F를 출력하는 프로그램을 작성하시오.
+    <div id="A_9498"></div> 
+    <br><br>
+</body>
+<script type="text/javascript">
+    var i = 0;
+
+    $(document).ready(function(){
+        print1330(10,20);
+        print9498(95);
+    });
+
+    function print1330(a,b){
+        var comp = '';
+        if(a>b)
+            comp = '>';
+        else if(a<b)
+            comp = '<';
+        else if(a==b)
+            comp = '=='
+
+        $('#A_1330').text(comp);
+    }
+
+    function print9498(c){
+        var score = ''
+        if(c>=100)
+            score = 'A';
+        else if(c<100 && c >=90)
+            score = 'B';
+        $('#A_9498').text(score);
+    }
+</script>
+</html>
