@@ -4,16 +4,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
 <body>
     <div class="main">
         <h3>Jquery Test</h3>
-        Hello World
-        <input type="button" value="A" id="btnA">
-        <input type="button" value="B" id="btnB">
-        <input type="button" value="C" id="btnC">
+        <span id="Chtxt">Hello World</span>
+        <input type="button" value="A" id="btnA" onclick="fnChange(a)">
+        <input type="button" value="B" id="btnB" onclick="fnChange(b)">
+        <input type="button" value="C" id="btnC" onclick="fnChange(c)">
     </div>    
 <script type="text/javascript">
+    function fnChange(cd){
+        $.('#Chtxt').text('HELLO A');
+    }
 </script>
 </body>
 </html>
