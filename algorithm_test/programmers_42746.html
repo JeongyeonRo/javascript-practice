@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>가장 큰 수</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+
+function solution(numbers) {
+
+    //arr.map();
+    //https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+    //배열 내의 모든 요소 각각에 대하여 주어진 함수를 호출한 결과를 리턴
+    //기본원리: 반복문을 돌며 배열 안의 요소들을 1대1로 짝지음
+    var answer = numbers.map(function(number) { 
+            //배열 내의 요소를 string으로 변환
+            return number.toString();
+        }
+        //화살표 함수로 표현할 경우
+        //https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+        //(number) => number.toString()
+
+    ).sort(function(a, b){  //유니코드로 정렬 ["6", "10", "2"] -> ["10","2","6"]
+        //정렬된 숫자 비교, B-A 내림차순 정렬
+       return (b+a) - (a+b)
+    }).join("")
+
+    //0000일 경우 0으로 도출
+    return answer.replace(/^0+/, "0");
+}
+
+
+console.log(solution([5,0,2,7]));
+
+
+
+</script>
+</html>
