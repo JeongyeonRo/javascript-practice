@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>음양 더하기</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+
+function solution(absolutes, signs) {
+    var answer = 0;
+    for(var i=0; i<signs.length; i++){
+        if(!signs[i]){
+            absolutes[i] = absolutes[i]*-1;
+        }
+        answer = answer + absolutes[i];
+    }
+    return answer;
+}
+
+console.log(solution([4,7,12],[true,false,true]));
+
+
+</script>
+</html>
