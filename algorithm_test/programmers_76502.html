@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>괄호 회전하기</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+
+function solution(s) {
+    var answer = 0;
+    for(var i=0; i<s.length; i++){
+        var tmp_arr = s.map(function(a){
+            s.pop(0);
+            s.push(pop(0));
+            console.log(i+" : "+tmp_arr);
+        })
+    }
+}
+
+console.log(solution(["}","]","(",")","[","{"]));
+
+
+</script>
+</html>
